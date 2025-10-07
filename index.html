@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Align-items - Exemplo Interativo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Align-items - Exemplo Interativo</h1>
+        <p class="subtitle">Controle o alinhamento vertical dos elementos flex</p>
+        
+        <div class="explanation">
+            <p><strong>align-items</strong> controla como os itens flex são alinhados ao longo do <strong>eixo transversal</strong> (vertical em linhas, horizontal em colunas).</p>
+            <p>Experimente os diferentes valores e mude a direção do flex para ver como o comportamento muda!</p>
+        </div>
+        
+        <div class="direction-controls">
+            <button id="row-dir" class="dir-btn active">Flex-direction: row</button>
+            <button id="column-dir" class="dir-btn">Flex-direction: column</button>
+        </div>
+        
+        <div class="controls">
+            <button id="stretch">stretch</button>
+            <button id="flex-start">flex-start</button>
+            <button id="flex-end">flex-end</button>
+            <button id="center">center</button>
+            <button id="baseline">baseline</button>
+        </div>
+        
+        <div class="demo-area">
+            <div class="demo-container">
+                <h3>Visualização do Alinhamento</h3>
+                <div class="flex-container" id="flex-container">
+                    <div class="flex-item">Item 1</div>
+                    <div class="flex-item">Item 2</div>
+                    <div class="flex-item">Item 3</div>
+                    <div class="flex-item">Item 4</div>
+                </div>
+                <div class="axis-info">
+                    <span id="main-axis">Eixo Principal → Horizontal</span>
+                    <br>
+                    <span id="cross-axis">Eixo Transversal ↓ Vertical</span>
+                </div>
+                <div class="visual-guide">
+                    <span>Início</span>
+                    <span>Centro</span>
+                    <span>Fim</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="code-display" id="code-display">
+.flex-container {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    /* Itens esticam para preencher o contêiner */
+}
+        </div>
+        
+        <div class="info-panel">
+            <h4>💡 Dica Prática:</h4>
+            <p><strong>stretch</strong>: Padrão - itens preenchem toda a altura/largura</p>
+            <p><strong>flex-start</strong>: Alinha no topo (row) ou esquerda (column)</p>
+            <p><strong>flex-end</strong>: Alinha na base (row) ou direita (column)</p>
+            <p><strong>center</strong>: Centraliza vertical/horizontalmente</p>
+            <p><strong>baseline</strong>: Alinha pela linha de base do texto</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
